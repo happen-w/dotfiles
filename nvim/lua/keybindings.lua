@@ -31,3 +31,18 @@ map("n", "cc", ":ccl<CR>", opt)
 -- ]t [t 标签
 
 
+
+-- LSP 
+
+map("n", "<leader>ca", "<cmd>CodeActionMenu<CR>", opt)
+map("n", "<leader>i", "<cmd>lua require('jdtls').organize_imports()<CR>", opt)
+map("n", "K", "<cmd>lua vim.lsp.buf.hover()<cr>", opt)
+
+map("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<cr>", opt)
+map("n", "gr", "<cmd>lua vim.lsp.buf.references()<cr>", opt)
+map("n", "gd", "<cmd>lua vim.lsp.buf.definition()<cr>", opt)
+map("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<cr>", opt)
+
+map("n", "R", "<cmd>lua require('renamer').rename()<cr>", opt)
+map("n", "==", "<cmd>lua vim.lsp.buf.formatting_seq_sync()<cr>", opt)
+

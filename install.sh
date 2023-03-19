@@ -26,4 +26,4 @@ apt-get install -y neovim
 apt-get install -y python3-dev python3-pip
 git config --global core.editor "vim"
 mkdir -p ~/.config/nvim/
-cp -R "$scriptDir/nvim/*" ~/.config/nvim/
+cp -R $scriptDir/nvim/* ~/.config/nvim/
