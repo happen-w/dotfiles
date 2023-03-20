@@ -15,3 +15,4 @@ autocmd("BufEnter", {
 
 vim.g.NERDTreeShowBookmarks = 1
 vim.g.NERDTreeShowHidden = 1
+vim.g.NERDTreeHijackNetrw=1

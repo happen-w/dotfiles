@@ -7,6 +7,8 @@ local install = function(use)
 
   -- 文件树
   use "preservim/nerdtree"
+  use 't9md/vim-choosewin'
+  use 'happen-w/nerdtree_choosewin-plugin'
   use "ryanoasis/vim-devicons"
   use "preservim/nerdcommenter"
   -- 主题
@@ -34,9 +36,20 @@ local install = function(use)
   use 'L3MON4D3/LuaSnip'         -- Snippets plugin
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
-  use("RRethy/vim-illuminate")
+  use 'RRethy/vim-illuminate'
   use 'jiangmiao/auto-pairs'
-  use("mfussenegger/nvim-jdtls")
+  use 'mfussenegger/nvim-jdtls'
+  use 'simrat39/symbols-outline.nvim'
+  use({
+    "weilbith/nvim-code-action-menu",
+    cmd = "CodeActionMenu",
+  })
+  use({
+    'thinca/vim-quickrun',
+    config = function()
+      vim.cmd("let g:quickrun_config = { '*': { 'outputter/buffer/opener': 'new' }, }")
+    end
+  })
 end
 
 local util = require('util')
@@ -58,13 +71,6 @@ local status_ok, packer = pcall(require, "packer")
 if not status_ok then
   return
 end
-
-vim.cmd([[
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerSync
-  augroup end
-]])
 
 packer.init({
   display = {

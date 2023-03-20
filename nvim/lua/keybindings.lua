@@ -34,7 +34,7 @@ map("n", "cc", ":ccl<CR>", opt)
 
 -- LSP 
 
-map("n", "<leader>ca", "<cmd>CodeActionMenu<CR>", opt)
+map("n", "<C-.>", "<cmd>CodeActionMenu<CR>", opt)
 map("n", "<leader>i", "<cmd>lua require('jdtls').organize_imports()<CR>", opt)
 map("n", "K", "<cmd>lua vim.lsp.buf.hover()<cr>", opt)
 
@@ -45,4 +45,7 @@ map("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<cr>", opt)
 
 map("n", "R", "<cmd>lua require('renamer').rename()<cr>", opt)
 map("n", "==", "<cmd>lua vim.lsp.buf.formatting_seq_sync()<cr>", opt)
+
+map("n", '-', "<Plug>(choosewin)", opt)
+
 

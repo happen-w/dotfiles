@@ -9,6 +9,7 @@ public class Demo {
     sList.add("1");
     sList.add("2");
     sList.add("3");
+
     for (String s : sList) {
       System.out.println(s);
     }
