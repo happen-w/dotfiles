@@ -8,6 +8,8 @@ Plug 'https://kgithub.com/preservim/nerdcommenter'
 Plug 'https://kgithub.com/t9md/vim-choosewin'
 Plug 'https://kgithub.com/happen-w/nerdtree_choosewin-plugin'
 Plug 'https://kgithub.com/thinca/vim-quickrun'
+Plug 'https://kgithub.com/iamcco/markdown-preview.nvim'
+Plug 'https://kgithub.com/dhruvasagar/vim-table-mode'
 call plug#end()
 
 let mapleader=" "
@@ -43,7 +45,6 @@ tnoremap <C-k> <C-w>k
 tnoremap <C-j> <C-w>j
 
 let g:EasyMotion_smartcase = 1
-nmap f <Plug>(easymotion-s)
 nmap ss <Plug>(easymotion-s2)
 
 nnoremap <leader>n :NERDTree<CR>

@@ -25,6 +25,12 @@ local install = function(use)
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
 
+  -- markdown
+  use({
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
+  })
+  use 'dhruvasagar/vim-table-mode'
 
   -- lsp
   use "neovim/nvim-lspconfig"
