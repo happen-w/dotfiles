@@ -1,0 +1,47 @@
+set easymotion
+set NERDTree
+
+
+
+" ===================== basic
+set scrolloff=5
+set incsearch
+set hlsearch
+set showcmd
+set showmode
+inoremap <c-v>     <Esc>pa
+set clipboard+=unnamed
+set smartcase
+set ignorecase
+set keep-english-in-normal
+
+" move windows
+nmap <c-h> <c-w><c-h>
+nmap <c-l> <c-w><c-l>
+nmap <c-k> <c-w><c-k>
+nmap <c-j> <c-w><c-j>
+
+
+" == 格式话代码
+nmap == :action ReformatCode<cr>
+
+" alt + 查看代码实现和声明
+nmap gd :action GotoImplementation<CR>
+nmap gr :action GotoDeclaration<CR>
+nmap <c-t> :action TypeHierarchy<CR>
+nmap R :action RenameElement<CR>
+nmap cf :action RenameFile<CR>
+nmap ss <Plug>(easymotion-s2)
+
+" 翻页
+nmap <c-down> <c-f>
+nmap <c-up> <c-b>
+nmap <c-j> 5j
+nmap <c-k> 5k
+
+" ====================带leader快捷键
+let mapleader = ' '
+" 重新载入文件
+nmap <leader>ls  :w<CR>:source<space>~\\\\.ideavimrc
+nmap <leader>n :NERDTree<CR>
+nmap <leader>r :action ExtractMethod<CR>
