@@ -31,7 +31,8 @@ local install = function(use)
     run = function() vim.fn["mkdp#util#install"]() end,
   })
   use 'dhruvasagar/vim-table-mode'
-
+  use 'mzlogin/vim-markdown-toc'
+   
   -- lsp
   use "neovim/nvim-lspconfig"
   use "williamboman/mason.nvim"

@@ -10,6 +10,7 @@ Plug 'https://kgithub.com/happen-w/nerdtree_choosewin-plugin'
 Plug 'https://kgithub.com/thinca/vim-quickrun'
 Plug 'https://kgithub.com/iamcco/markdown-preview.nvim'
 Plug 'https://kgithub.com/dhruvasagar/vim-table-mode'
+Plug 'https://kgithub.com/mzlogin/vim-markdown-toc'
 call plug#end()
 
 let mapleader=" "
