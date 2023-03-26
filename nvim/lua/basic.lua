@@ -23,3 +23,5 @@ vim.o.smartcase = true
 -- undo持久化
 vim.o.undofile = true
 vim.opt.undodir = os.getenv("HOME") .. '/.config/nvim/.undodir'
+
+vim.o.wildignorecase = true
