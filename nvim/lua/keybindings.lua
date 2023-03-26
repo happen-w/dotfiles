@@ -48,4 +48,22 @@ map("n", "==", "<cmd>lua vim.lsp.buf.format()<cr>", opt)
 
 map("n", '-', "<Plug>(choosewin)", opt)
 
+-- quickrun
+map("n", "Q", ":QuickRun<CR>", opt)
+map("n", "<leader>q", "<C-w><C-k>:q<CR>", opt)
+
+-- 
+map("n", "<leader>1", "<Plug>BuffetSwitch(1)", opt)
+map("n", "<leader>2", "<Plug>BuffetSwitch(2)", opt)
+map("n", "<leader>3", "<Plug>BuffetSwitch(3)", opt)
+map("n", "<leader>4", "<Plug>BuffetSwitch(4)", opt)
+map("n", "<leader>5", "<Plug>BuffetSwitch(5)", opt)
+map("n", "<leader>6", "<Plug>BuffetSwitch(6)", opt)
+map("n", "<leader>7", "<Plug>BuffetSwitch(7)", opt)
+map("n", "<leader>8", "<Plug>BuffetSwitch(8)", opt)
+map("n", "<leader>9", "<Plug>BuffetSwitch(9)", opt)
+map("n", "<Tab>", ":bn<CR>", opt);
+map("n", "<S-Tab>", ":bp<CR>", opt);
+map("n", "<leader><Tab>", ":Bw<CR>", opt);
+map("n", "<leader><S-Tab>", ":Bw!<CR>", opt);
 

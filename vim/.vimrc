@@ -11,6 +11,7 @@ Plug 'https://kgithub.com/thinca/vim-quickrun'
 Plug 'https://kgithub.com/iamcco/markdown-preview.nvim'
 Plug 'https://kgithub.com/dhruvasagar/vim-table-mode'
 Plug 'https://kgithub.com/mzlogin/vim-markdown-toc'
+Plug 'https://kgithub.com/bagrat/vim-buffet'
 call plug#end()
 
 let mapleader=" "
@@ -65,3 +66,19 @@ let &t_SI = "\<Esc>[6 q"
 let &t_SR = "\<Esc>[3 q"
 " NORMAL mode
 let &t_EI = "\<Esc>[2 q"
+
+" buffer跳转
+nmap <leader>1 <Plug>BuffetSwitch(1)
+nmap <leader>2 <Plug>BuffetSwitch(2)
+nmap <leader>3 <Plug>BuffetSwitch(3)
+nmap <leader>4 <Plug>BuffetSwitch(4)
+nmap <leader>5 <Plug>BuffetSwitch(5)
+nmap <leader>6 <Plug>BuffetSwitch(6)
+nmap <leader>7 <Plug>BuffetSwitch(7)
+nmap <leader>8 <Plug>BuffetSwitch(8)
+nmap <leader>9 <Plug>BuffetSwitch(9)
+nmap <leader>0 <Plug>BuffetSwitch(10)
+noremap <Tab> :bn<CR>
+noremap <S-Tab> :bp<CR>
+noremap <Leader><Tab> :Bw<CR>
+noremap <Leader><S-Tab> :Bw!<CR>

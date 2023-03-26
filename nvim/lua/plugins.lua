@@ -18,7 +18,7 @@ local install = function(use)
   -- 移动查找
   use { 'phaazon/hop.nvim', branch = 'v2' }
   use 'tpope/vim-unimpaired'
-
+  use 'bagrat/vim-buffet'  -- buffer 移动
   -- telescope
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.1',
