@@ -44,7 +44,7 @@ map("n", "gd", "<cmd>lua vim.lsp.buf.definition()<cr>", opt)
 map("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<cr>", opt)
 
 map("n", "R", "<cmd>lua require('renamer').rename()<cr>", opt)
-map("n", "==", "<cmd>lua vim.lsp.buf.format()<cr>", opt)
+map("n", "==", "<cmd>lua vim.lsp.buf.formatting()<cr>", opt)
 
 map("n", '-', "<Plug>(choosewin)", opt)
 
