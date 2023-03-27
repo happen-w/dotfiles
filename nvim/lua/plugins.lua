@@ -1,9 +1,6 @@
 local install = function(use)
   use 'wbthomason/packer.nvim'
 
-  use { "morhetz/gruvbox", config = function()
-    vim.cmd("colorscheme gruvbox")
-  end }
 
   -- 文件树
   use "preservim/nerdtree"
@@ -14,11 +11,16 @@ local install = function(use)
   -- 主题
   use "vim-airline/vim-airline"
   use "vim-airline/vim-airline-themes"
-
+  use { 'NTBBloodbath/doom-one.nvim', commit = '60eb78255472bd9a2ca483ce70757cfda57cc706', config = function()
+    vim.cmd("colorscheme doom-one")
+  end }
+  use { "morhetz/gruvbox", config = function()
+    -- vim.cmd("colorscheme gruvbox")
+  end }
   -- 移动查找
   use { 'phaazon/hop.nvim', branch = 'v2' }
   use 'tpope/vim-unimpaired'
-  use 'bagrat/vim-buffet'  -- buffer 移动
+  use 'bagrat/vim-buffet' -- buffer 移动
   -- telescope
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.1',
@@ -32,7 +34,7 @@ local install = function(use)
   })
   use 'dhruvasagar/vim-table-mode'
   use 'mzlogin/vim-markdown-toc'
-   
+
   -- lsp
   use "neovim/nvim-lspconfig"
   use "williamboman/mason.nvim"
