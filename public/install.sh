@@ -8,7 +8,7 @@ sed -i "s@http://.*archive.ubuntu.com@http://mirrors.tuna.tsinghua.edu.cn@g" /et
 sed -i "s@http://.*security.ubuntu.com@http://mirrors.tuna.tsinghua.edu.cn@g" /etc/apt/sources.list
 apt update
 
-install_list=(vim curl zsh git software-properties-common ripgrep net-tools unzip nodejs npm )
+install_list=(vim curl zsh git software-properties-common ripgrep net-tools unzip nodejs npm openjdk-17-jdk )
 
 for elem in ${install_list[@]}
 do
