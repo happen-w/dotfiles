@@ -40,6 +40,7 @@ local luasetting = {
     },
     workspace = {
       library = vim.api.nvim_get_runtime_file("", true),
+      checkThirdParty = false
     },
     telemetry = {
       enable = false,
@@ -63,5 +64,4 @@ for _, server in ipairs(servers) do
   lspconfig[server].setup(opts)
 
   ::continue::
-  -- install_root_dir = path.concat { vim.fn.stdpath "data", "mason" },
 end

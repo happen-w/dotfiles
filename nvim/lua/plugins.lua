@@ -1,7 +1,7 @@
 local install = function(use)
   use 'wbthomason/packer.nvim'
 
-
+  use 'akinsho/toggleterm.nvim'
   -- 文件树
   use "preservim/nerdtree"
   use 't9md/vim-choosewin'
@@ -43,6 +43,7 @@ local install = function(use)
   use 'hrsh7th/cmp-nvim-lsp'     -- LSP source for nvim-cmp
   use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
   use 'L3MON4D3/LuaSnip'         -- Snippets plugin
+  use "rafamadriz/friendly-snippets"
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
   use 'RRethy/vim-illuminate'
@@ -59,6 +60,14 @@ local install = function(use)
       vim.cmd("let g:quickrun_config = { '*': { 'outputter/buffer/opener': 'new' }, }")
     end
   })
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+
+  -- DAP
+  use "mfussenegger/nvim-dap"
+  use "jay-babu/mason-nvim-dap.nvim"
+  use "rcarriga/nvim-dap-ui"
+
+  use "sakhnik/nvim-gdb"
 end
 
 local util = require('util')
