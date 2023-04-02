@@ -66,7 +66,7 @@ local install = function(use)
   use "mfussenegger/nvim-dap"
   use "jay-babu/mason-nvim-dap.nvim"
   use "rcarriga/nvim-dap-ui"
-
+  use "theHamsta/nvim-dap-virtual-text"
   use "sakhnik/nvim-gdb"
 end
 

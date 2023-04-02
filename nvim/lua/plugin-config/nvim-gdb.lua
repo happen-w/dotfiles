@@ -56,3 +56,5 @@ vim.cmd([[
 vim.cmd([[
   autocmd User NvimGdbCleanup :lua CloseWatchBuffers()
 ]])
+
+vim.cmd([[command! StartGdbSession lua StartGdbSession() ]])

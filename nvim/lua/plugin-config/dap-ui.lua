@@ -31,9 +31,9 @@ dapui.setup({
     },
     {
       elements = {
-        -- 'stacks',
+        'stacks',
         'breakpoints',
-        'watches',
+        -- 'watches',
       },
       size = 30,
       position = 'right',
