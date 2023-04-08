@@ -10,7 +10,7 @@ vim.g.kmap = vim.api.nvim_set_keymap
 local map = vim.g.kmap
 local opt = vim.g.kopt
 
-
+map("v", "<C-c>", "\"*y", opt)
 -- 切换窗口
 map("n", "<C-h>", "<C-w><C-h>", opt)
 map("n", "<C-j>", "<C-w><C-j>", opt)
