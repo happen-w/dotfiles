@@ -17,6 +17,7 @@ map("n", "<C-j>", "<C-w><C-j>", opt)
 map("n", "<C-k>", "<C-w><C-k>", opt)
 map("n", "<C-l>", "<C-w><C-l>", opt)
 
+map("i", "<C-s>", "<Esc>:w<CR>a", opt)
 
 -- quickfix
 map("n", "co", ":copen<CR>", opt)
