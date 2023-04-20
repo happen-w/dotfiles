@@ -2,6 +2,7 @@ local install = function(use)
   use 'wbthomason/packer.nvim'
 
   use 'akinsho/toggleterm.nvim'
+  use "lukas-reineke/indent-blankline.nvim"
   -- 文件树
   use "preservim/nerdtree"
   use 't9md/vim-choosewin'
