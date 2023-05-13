@@ -1,10 +1,10 @@
 -- utf8
 vim.g.encoding = "UTF-8"
 vim.o.fileencoding = "utf-8"
--- 显示行号相对行号
+-- 显示行号
 vim.o.number = true
 
--- 缩进4个空格等于一个Tab
+-- 缩进2个空格等于一个Tab
 vim.o.tabstop = 2
 vim.o.shiftwidth = 2
 vim.o.expandtab = true

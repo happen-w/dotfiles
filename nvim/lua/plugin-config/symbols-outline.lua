@@ -65,3 +65,7 @@ if status_ok then
     },
   })
 end
+
+-- :SymbolsOutline	Toggle symbols outline
+-- :SymbolsOutlineOpen	Open symbols outline
+-- :SymbolsOutlineClose	Close symbols outline

@@ -2,21 +2,23 @@ local install = function(use)
   use 'wbthomason/packer.nvim'
 
   use 'akinsho/toggleterm.nvim'
-  use "lukas-reineke/indent-blankline.nvim"
+  use 'lukas-reineke/indent-blankline.nvim'
   -- 文件树
-  use "preservim/nerdtree"
+  use 'preservim/nerdtree'
+  -- 窗口选择
   use 't9md/vim-choosewin'
+  -- nerdtree 打开文件窗口选择
   use 'happen-w/nerdtree_choosewin-plugin'
-  use "ryanoasis/vim-devicons"
-  use "preservim/nerdcommenter"
+  use 'ryanoasis/vim-devicons'
+  use 'preservim/nerdcommenter'
   -- 主题
-  use "vim-airline/vim-airline"
-  use "vim-airline/vim-airline-themes"
+  use 'vim-airline/vim-airline'
+  use 'vim-airline/vim-airline-themes'
   use { 'NTBBloodbath/doom-one.nvim', commit = '60eb78255472bd9a2ca483ce70757cfda57cc706', config = function()
-    vim.cmd("colorscheme doom-one")
+    vim.cmd('colorscheme doom-one')
   end }
-  use { "morhetz/gruvbox", config = function()
-    -- vim.cmd("colorscheme gruvbox")
+  use { 'morhetz/gruvbox', config = function()
+    -- vim.cmd('colorscheme gruvbox')
   end }
   -- 移动查找
   use { 'phaazon/hop.nvim', branch = 'v2' }
@@ -30,30 +32,29 @@ local install = function(use)
 
   -- markdown
   use({
-    "iamcco/markdown-preview.nvim",
-    run = function() vim.fn["mkdp#util#install"]() end,
+    'iamcco/markdown-preview.nvim',
+    run = function() vim.fn['mkdp#util#install']() end,
   })
   use 'dhruvasagar/vim-table-mode'
   use 'mzlogin/vim-markdown-toc'
 
   -- lsp
-  use "neovim/nvim-lspconfig"
-  use "williamboman/mason.nvim"
-  use "williamboman/mason-lspconfig.nvim"
+  use 'neovim/nvim-lspconfig'
+  use 'williamboman/mason.nvim'
+  use 'williamboman/mason-lspconfig.nvim'
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-nvim-lsp'     -- LSP source for nvim-cmp
   use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
   use 'L3MON4D3/LuaSnip'         -- Snippets plugin
-  use "rafamadriz/friendly-snippets"
+  use 'rafamadriz/friendly-snippets'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
   use 'RRethy/vim-illuminate'
   use 'jiangmiao/auto-pairs'
   use 'mfussenegger/nvim-jdtls'
-  use 'simrat39/symbols-outline.nvim'
   use({
-    "weilbith/nvim-code-action-menu",
-    cmd = "CodeActionMenu",
+    'weilbith/nvim-code-action-menu',
+    cmd = 'CodeActionMenu',
   })
   use({
     'thinca/vim-quickrun',
@@ -64,11 +65,15 @@ local install = function(use)
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
   -- DAP
-  use "mfussenegger/nvim-dap"
-  use "jay-babu/mason-nvim-dap.nvim"
-  use "rcarriga/nvim-dap-ui"
-  use "theHamsta/nvim-dap-virtual-text"
-  use "sakhnik/nvim-gdb"
+  -- use 'mfussenegger/nvim-dap'
+  -- use 'jay-babu/mason-nvim-dap.nvim'
+  -- use 'rcarriga/nvim-dap-ui'
+  -- use 'theHamsta/nvim-dap-virtual-text'
+  use 'sakhnik/nvim-gdb'
+
+  -- 不经常用的
+  use 'simrat39/symbols-outline.nvim'
+
 end
 
 local util = require('util')
@@ -76,8 +81,8 @@ local fn = vim.fn
 local ensure_packer = function()
   local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
   if fn.empty(fn.glob(install_path)) > 0 then
-    print("installing packer")
-    fn.system(util.split("git clone --depth 1 https://kgithub.com/wbthomason/packer.nvim " .. install_path, " "))
+    print('installing packer')
+    fn.system(util.split('git clone --depth 1 https://kgithub.com/wbthomason/packer.nvim ' .. install_path, ' '))
     vim.cmd [[packadd packer.nvim]]
     return true
   end
@@ -86,7 +91,7 @@ end
 
 local packer_bootstrap = ensure_packer()
 
-local status_ok, packer = pcall(require, "packer")
+local status_ok, packer = pcall(require, 'packer')
 if not status_ok then
   return
 end
@@ -94,7 +99,7 @@ end
 packer.init({
   display = {
     open_fn = function()
-      return require("packer.util").float({ border = "rounded" })
+      return require('packer.util').float({ border = 'rounded' })
     end,
   },
   git = {

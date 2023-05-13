@@ -3,12 +3,12 @@ if status_ok then
   configs.setup {
     -- 安装 language parser
     -- :TSInstallInfo 命令查看支持的语言
-    ensure_installed = { "c" },
+    ensure_installed = { "c", "lua" },
 
     -- 启用代码高亮功能
     highlight = {
-      enable = false,
-      additional_vim_regex_highlighting = false
+      enable = true,
+      additional_vim_regex_highlighting = true
     },
     -- 启用增量选择
     incremental_selection = {

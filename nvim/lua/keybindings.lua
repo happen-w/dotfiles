@@ -10,6 +10,7 @@ vim.g.kmap = vim.api.nvim_set_keymap
 local map = vim.g.kmap
 local opt = vim.g.kopt
 
+map("n", "<leader>n", ":NERDTree<cr>", opt)
 map("v", "<C-c>", "\"*y", opt)
 -- 切换窗口
 map("n", "<C-h>", "<C-w><C-h>", opt)
@@ -25,16 +26,8 @@ map("n", "co", ":copen<CR>", opt)
 -- map("n", "cp", ":cp<CR>", opt)
 map("n", "cc", ":ccl<CR>", opt)
 
--- unimpaired 取代了 cn
--- ]b [b 变量缓冲区
--- ]f [f 文件
--- ]q [q quickfix
--- ]t [t 标签
-
-
 
 -- LSP
-
 map("n", "<C-.>", "<cmd>CodeActionMenu<CR>", opt)
 map("n", "<leader>i", "<cmd>lua require('jdtls').organize_imports()<CR>", opt)
 map("n", "K", "<cmd>lua vim.lsp.buf.hover()<cr>", opt)
@@ -53,31 +46,25 @@ map("n", '-', "<Plug>(choosewin)", opt)
 map("n", "Q", ":QuickRun<CR>", opt)
 map("n", "<leader>q", "<C-w><C-k>:q<CR>", opt)
 
---
-map("n", "<leader>1", "<Plug>BuffetSwitch(1)", opt)
-map("n", "<leader>2", "<Plug>BuffetSwitch(2)", opt)
-map("n", "<leader>3", "<Plug>BuffetSwitch(3)", opt)
-map("n", "<leader>4", "<Plug>BuffetSwitch(4)", opt)
-map("n", "<leader>5", "<Plug>BuffetSwitch(5)", opt)
-map("n", "<leader>6", "<Plug>BuffetSwitch(6)", opt)
-map("n", "<leader>7", "<Plug>BuffetSwitch(7)", opt)
-map("n", "<leader>8", "<Plug>BuffetSwitch(8)", opt)
-map("n", "<leader>9", "<Plug>BuffetSwitch(9)", opt)
+-- tab移动
 map("n", "<Tab>", ":bn<CR>", opt);
 map("n", "<S-Tab>", ":bp<CR>", opt);
 map("n", "<leader><Tab>", ":Bw<CR>", opt);
-map("n", "<leader><S-Tab>", ":Bw!<CR>", opt);
-
-
 
 -- debug
-map("n", "<leader>bb", "<cmd>lua require'dap'.toggle_breakpoint()<cr>", opt)
-map("n", "<leader>dd", "<cmd>lua require'dap'.clear_breakpoints()<cr>", opt)
+-- map("n", "<leader>bb", "<cmd>lua require'dap'.toggle_breakpoint()<cr>", opt)
+-- map("n", "<leader>dd", "<cmd>lua require'dap'.clear_breakpoints()<cr>", opt)
 
 -- 启动/继续运行
-map("n", "<F5>", "<cmd>lua require'dap'.continue()<cr>", opt)
-map("n", "<F6>", "<cmd>lua require'dap'.step_over()<cr>", opt)
-map("n", "<F7>", "<cmd>lua require'dap'.step_into()<cr>", opt)
-map("n", "<F8>", "<cmd>lua require'dap'.step_out()<cr>", opt)
+-- map("n", "<F5>", "<cmd>lua require'dap'.continue()<cr>", opt)
+-- map("n", "<F6>", "<cmd>lua require'dap'.step_over()<cr>", opt)
+-- map("n", "<F7>", "<cmd>lua require'dap'.step_into()<cr>", opt)
+-- map("n", "<F8>", "<cmd>lua require'dap'.step_out()<cr>", opt)
 
+-- 启动命名行
 map("n", "<leader>to", "<cmd>:ToggleTerm<cr>", opt)
+
+-- 搜索和跳转 
+map("n", "ss", ":HopChar2<CR>", opt)
+map('n', 'ff', ":Telescope find_files<CR>", opt)
+map('n', 'fg', ":Telescope live_grep<CR>", opt)

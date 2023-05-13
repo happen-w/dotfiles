@@ -49,7 +49,6 @@ _G.CloseWatchBuffers = function()
 end
 
 
--- vim.api.nvim_set_keymap("n", "<F5>", "<cmd>lua StartGdbSession()<CR>", {})
 vim.cmd([[
   autocmd User NvimGdbStart :lua GdbSessionInit()
 ]])

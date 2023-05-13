@@ -6,3 +6,4 @@ if status_ok then
     shell = "zsh"
   })
 end
+-- map("n", "<leader>to", "<cmd>:ToggleTerm<cr>", opt)
