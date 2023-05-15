@@ -24,7 +24,7 @@ mason.setup({
 })
 
 mason_lspconfig.setup({
-  ensure_installed = { "pyright", "lua_ls", "clangd", "jdtls" },
+  ensure_installed = { "pyright", "lua_ls", "clangd", "jdtls", "rust_analyzer" },
   -- ensure_installed = { "pyright", "lua_ls", "clangd"},
 })
 
