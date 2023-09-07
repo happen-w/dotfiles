@@ -34,7 +34,7 @@ _G.GdbSessionInit = function()
   -- create bt & info locals window
   -- vim.api.nvim_command(":belowright GdbCreateWatch thread apply all bt")
   -- vim.api.nvim_command(":wincmd h")
-  vim.api.nvim_command(":belowright GdbCreateWatch info locals")
+  -- vim.api.nvim_command(":belowright GdbCreateWatch info locals")
   vim.api.nvim_command(":set wrap")
 
   -- move cursor back to gdb terminal
@@ -52,8 +52,8 @@ end
 vim.cmd([[
   autocmd User NvimGdbStart :lua GdbSessionInit()
 ]])
-vim.cmd([[
-  autocmd User NvimGdbCleanup :lua CloseWatchBuffers()
-]])
+-- vim.cmd([[
+--   autocmd User NvimGdbCleanup :lua CloseWatchBuffers()
+-- ]])
 
 vim.cmd([[command! StartGdbSession lua StartGdbSession() ]])

@@ -25,3 +25,6 @@ vim.o.undofile = true
 vim.opt.undodir = os.getenv("HOME") .. '/.config/nvim/.undodir'
 
 vim.o.wildignorecase = true
+
+
+vim.g.leetcode_browser="chrome"

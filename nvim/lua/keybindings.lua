@@ -63,7 +63,8 @@ map("n", "<leader><Tab>", ":Bw<CR>", opt);
 -- map("n", "<F8>", "<cmd>lua require'dap'.step_out()<cr>", opt)
 
 -- 启动命名行
-map("n", "<leader>to", "<cmd>:ToggleTerm<cr>", opt)
+map("n", "<leader>to", "<cmd>:ToggleTerm<cr><C-\\><C-n>i", opt)
+map('t', '<esc>', "<C-\\><C-n><Plug>(choosewin)", opt)
 
 -- 搜索和跳转
 map("n", "ss", ":HopChar2<CR>", opt)

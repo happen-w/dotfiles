@@ -111,6 +111,7 @@ source $ZSH/oh-my-zsh.sh
 alias cman="man -M /usr/share/man/zh_CN/"
 export LANG=zh_CN.UTF-8
 export LANGUAGE=zh_CN:zh:en_US:en
-
+export NEMU_HOME=/root/tmp/ics2020/nemu
+export AM_HOME=/root/tmp/ics2020/abstract-machine
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

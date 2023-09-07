@@ -8,7 +8,7 @@ sed -i "s@http://.*archive.ubuntu.com@http://mirrors.tuna.tsinghua.edu.cn@g" /et
 sed -i "s@http://.*security.ubuntu.com@http://mirrors.tuna.tsinghua.edu.cn@g" /etc/apt/sources.list
 apt update
 
-install_list=(vim curl zsh git software-properties-common ripgrep net-tools unzip nodejs npm )
+install_list=(vim curl zsh git ripgrep net-tools unzip nodejs npm wget tldr gdb cmake)
 
 for elem in ${install_list[@]}
 do
@@ -27,3 +27,15 @@ done
 # git config --global core.editor "vim"
 # mkdir -p ~/.config/nvim/
 # cp -R $scriptDir/nvim/* ~/.config/nvim/
+
+git config --global url."github".insteadOf kgithub
+
+# git clone --depth=1 https://kgithub.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
+# git clone https://kgithub.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+# git clone https://kgithub.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+#
+#
+# python3 
+# ln -s python /usr/bin/python3.10
