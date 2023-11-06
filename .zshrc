@@ -79,7 +79,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git history zsh-syntax-highlighting zsh-autosuggestions jsontools)
+plugins=(git history zsh-syntax-highlighting zsh-autosuggestions jsontools command-not-found vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -115,3 +115,5 @@ export NEMU_HOME=/root/tmp/ics2020/nemu
 export AM_HOME=/root/tmp/ics2020/abstract-machine
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+[[ -s /home/ubuntu/.autojump/etc/profile.d/autojump.sh ]] && source /home/ubuntu/.autojump/etc/profile.d/autojump.sh
