@@ -14,12 +14,16 @@ local install = function(use)
   -- 主题
   use { 'vim-airline/vim-airline', commit = '5891a3f7bedb5d0b23a546189a607836913814bb' }
   use { 'vim-airline/vim-airline-themes', commit = 'dd81554c2231e438f6d0e8056ea38fd0e80ac02a' }
-  use { 'NTBBloodbath/doom-one.nvim', commit = '60eb78255472bd9a2ca483ce70757cfda57cc706', config = function()
-    vim.cmd('colorscheme doom-one')
-  end }
-  use { 'morhetz/gruvbox', commit = 'bf2885a95efdad7bd5e4794dd0213917770d79b7', config = function()
-    -- vim.cmd('colorscheme gruvbox')
-  end }
+
+  use {'navarasu/onedark.nvim' 
+    , config = function() vim.cmd('colorscheme onedark') end
+  }
+  use { 'NTBBloodbath/doom-one.nvim', commit = '60eb78255472bd9a2ca483ce70757cfda57cc706'
+   -- , config = function() vim.cmd('colorscheme doom-one') end
+  }
+  use { 'morhetz/gruvbox', commit = 'bf2885a95efdad7bd5e4794dd0213917770d79b7'
+  -- , config = function() vim.cmd('colorscheme gruvbox') end
+  }
   -- 移动查找
   use { 'phaazon/hop.nvim', branch = 'v2' }
   use { 'tpope/vim-unimpaired', commit = '6d44a6dc2ec34607c41ec78acf81657248580bf1' }
@@ -78,6 +82,7 @@ local install = function(use)
 
   -- leetcode
   use 'mbledkowski/neuleetcode.vim'
+
 
 end
 
