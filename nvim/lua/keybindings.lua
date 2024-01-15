@@ -70,3 +70,5 @@ map('t', '<esc>', "<C-\\><C-n><Plug>(choosewin)", opt)
 map("n", "ss", ":HopChar2<CR>", opt)
 map('n', 'ff', ":Telescope find_files<CR>", opt)
 map('n', 'fg', ":Telescope live_grep<CR>", opt)
+
+map('n', '\\n', ":noh<CR>", opt)
