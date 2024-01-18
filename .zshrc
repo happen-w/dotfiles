@@ -117,3 +117,11 @@ export AM_HOME=/root/tmp/ics2020/abstract-machine
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && source ~/.autojump/etc/profile.d/autojump.sh
+
+
+### 配置显示文件颜色
+LS_COLORS=$LS_COLORS:'di=0;35:' ; export LS_COLORS
+
+
+### 配置头文件包含位置
+C_INCLUDE_PATH='/usr/include/nginx' ; export C_INCLUDE_PATH
