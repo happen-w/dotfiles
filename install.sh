@@ -28,7 +28,7 @@ done
 # mkdir -p ~/.config/nvim/
 # cp -R $scriptDir/nvim/* ~/.config/nvim/
 
-git config --global url."github".insteadOf kkgithub
+# git config --global url."github".insteadOf kkgithub
 
 # git clone --depth=1 https://kgithub.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
