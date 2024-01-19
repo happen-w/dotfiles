@@ -8,10 +8,14 @@ def load_bp():
   else:
     print("File not found: " + filename)
 
-# Define a function to be called after reading symbols
-def symbol_loaded_handler(_):
-    # Your code here
-    load_bp()
+def symbol_loaded_handler(event):
+    
+    # 获取当前工作目录的路径
+    current_dir = os.getcwd()
+    newFile = event.new_objfile.filename
+    if newFile.startswith(current_dir):
+        load_bp()
 
 # Add the hook
 gdb.events.new_objfile.connect(symbol_loaded_handler)
+
