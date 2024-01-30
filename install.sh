@@ -39,3 +39,5 @@ done
 #
 # python3 
 # ln -s python /usr/bin/python3.10
+#
+sudo pip3 install tldr
