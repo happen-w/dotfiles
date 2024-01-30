@@ -18,6 +18,16 @@ set_proxy(){
   git config --global http.https://github.com.proxy ${PROXY_HTTP}
   git config --global https.https://github.com.proxy ${PROXY_HTTP}
 
+cat > 'config' <<- EOF
+ Host github.com
+         Hostname ssh.github.com
+         Port 443
+         User git
+         ProxyCommand nc -v -x ${hostip}:${port} %h %p
+EOF
+
+  mv config ~/.ssh/config
+
   echo "Proxy has been opened."
 }
 
