@@ -1,0 +1,3 @@
+[submodule "nvim-lazy"]
+	path = nvim-lazy
+	url = git@github.com:happen-w/dotfile-lazy.git
